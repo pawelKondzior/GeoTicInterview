@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{8EE430D6-9FF6-4F77-8047-7E54B244CEE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{55750187-71F4-4BC2-9D7D-B4882FDDAF3D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BL", "BL", "{0B47DD54-80C0-4BE5-9566-A4DC2DFE9712}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoApp.Web", "Apps\GeoApp.Web\GeoApp.Web.csproj", "{0DBA8508-6E31-4D6E-BE04-7362F40CFF62}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoApp.BL.Contracts", "BL\GeoApp.BL.Contracts\GeoApp.BL.Contracts.csproj", "{1F635559-98B4-48A8-BC6E-0E9D8967BB12}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoApp.BL.Services", "BL\GeoApp.BL.Services\GeoApp.BL.Services.csproj", "{516F5071-A404-4899-9C7B-8B4E1BA96990}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D3858665-AE2C-4892-AB86-1B57AE412D04}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoApp.Tests", "Tests\GeoApp.Tests\GeoApp.Tests.csproj", "{3597F561-A4EC-4F51-A25E-DD85D785A8A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DATA", "DATA", "{9999BB2A-5FBE-4CF9-AEE7-A6A403CA2006}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FakeData", "FakeData", "{70D0C907-DFAC-45A1-8984-68F64026F5D0}"
+	ProjectSection(SolutionItems) = preProject
+		DATA\FakeData\1_Points.json = DATA\FakeData\1_Points.json
+		DATA\FakeData\2_Points.json = DATA\FakeData\2_Points.json
+		DATA\FakeData\3_Points.json = DATA\FakeData\3_Points.json
+		DATA\FakeData\4_Points.json = DATA\FakeData\4_Points.json
+		DATA\FakeData\5_Points.json = DATA\FakeData\5_Points.json
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoApp.DAL", "DAL\GeoApp.Dal\GeoApp.DAL.csproj", "{3C9B72D1-80BD-45B6-ACAD-4E1F89CE65CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DBA8508-6E31-4D6E-BE04-7362F40CFF62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DBA8508-6E31-4D6E-BE04-7362F40CFF62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DBA8508-6E31-4D6E-BE04-7362F40CFF62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DBA8508-6E31-4D6E-BE04-7362F40CFF62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F635559-98B4-48A8-BC6E-0E9D8967BB12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F635559-98B4-48A8-BC6E-0E9D8967BB12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F635559-98B4-48A8-BC6E-0E9D8967BB12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F635559-98B4-48A8-BC6E-0E9D8967BB12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{516F5071-A404-4899-9C7B-8B4E1BA96990}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{516F5071-A404-4899-9C7B-8B4E1BA96990}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{516F5071-A404-4899-9C7B-8B4E1BA96990}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{516F5071-A404-4899-9C7B-8B4E1BA96990}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3597F561-A4EC-4F51-A25E-DD85D785A8A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3597F561-A4EC-4F51-A25E-DD85D785A8A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3597F561-A4EC-4F51-A25E-DD85D785A8A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3597F561-A4EC-4F51-A25E-DD85D785A8A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C9B72D1-80BD-45B6-ACAD-4E1F89CE65CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C9B72D1-80BD-45B6-ACAD-4E1F89CE65CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C9B72D1-80BD-45B6-ACAD-4E1F89CE65CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C9B72D1-80BD-45B6-ACAD-4E1F89CE65CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0DBA8508-6E31-4D6E-BE04-7362F40CFF62} = {8EE430D6-9FF6-4F77-8047-7E54B244CEE0}
+		{1F635559-98B4-48A8-BC6E-0E9D8967BB12} = {0B47DD54-80C0-4BE5-9566-A4DC2DFE9712}
+		{516F5071-A404-4899-9C7B-8B4E1BA96990} = {0B47DD54-80C0-4BE5-9566-A4DC2DFE9712}
+		{3597F561-A4EC-4F51-A25E-DD85D785A8A8} = {D3858665-AE2C-4892-AB86-1B57AE412D04}
+		{70D0C907-DFAC-45A1-8984-68F64026F5D0} = {9999BB2A-5FBE-4CF9-AEE7-A6A403CA2006}
+		{3C9B72D1-80BD-45B6-ACAD-4E1F89CE65CE} = {55750187-71F4-4BC2-9D7D-B4882FDDAF3D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D266B7FA-08E2-4873-A17B-7ED7BE04B46D}
+	EndGlobalSection
+EndGlobal
