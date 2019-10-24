@@ -17,7 +17,7 @@ namespace GeoApp.DAL.Repository
     /// więc załaduje wszystkie przy próbie odczytu skoro za klucz zakładamy unitId i np IRepository mogło by byc użyte a pliki w MS SQL
     /// </summary>
     public class JsonRepository : LinqRepositoryBase<GeoInformation, string>
-    {
+    { 
         List<GeoInformation> AllItems {get; set;}
         string[] FileNames { get; set; }
         public JsonRepository(string[] fileNames)

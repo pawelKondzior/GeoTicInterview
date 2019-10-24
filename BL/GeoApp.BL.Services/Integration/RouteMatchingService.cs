@@ -44,6 +44,12 @@ namespace GeoApp.BL.Services.Services
 
 
             var response = client.Execute(request);
+
+            if (response.StatusCode != System.Net.HttpStatusCode.OK)
+            {
+                throw new Exception("MatchRoute ex");
+            }
+
             var jsonObj = JsonConvert.DeserializeObject<RootJsonReponse>(response.Content);
 
             return jsonObj;
