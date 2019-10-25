@@ -1,12 +1,10 @@
-﻿using GeoApp.BL.Contracts.IServices;
+﻿using AutoMapper;
+using GeoApp.BL.Contracts.DTO;
+using GeoApp.BL.Contracts.IServices;
 using GeoApp.DAL.Model;
 using SharpRepository.Repository;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Linq;
-using GeoApp.BL.Contracts.DTO;
-using AutoMapper;
 
 namespace GeoApp.BL.Services.Services
 {
@@ -15,11 +13,11 @@ namespace GeoApp.BL.Services.Services
         private IRepository<GeoInformation, string> Repo { get; set; }
 
         private IMapper Mapper { get; set; }
+
         public PointsService(IRepository<GeoInformation, string> repository, IMapper mapper)
         {
             Repo = repository;
             Mapper = mapper;
-            
         }
 
         public ICollection<PointOutputDto> GetPoints(int unitId)
@@ -32,7 +30,5 @@ namespace GeoApp.BL.Services.Services
 
             return result;
         }
-
-
     }
 }

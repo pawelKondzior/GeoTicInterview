@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using GeoApp.BL.Contracts.DTO;
+﻿using GeoApp.BL.Contracts.DTO;
 using GeoApp.BL.Contracts.IServices;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
+using System.Collections.Generic;
 
 namespace GeoApp.Web.Controllers
 {
@@ -14,15 +10,12 @@ namespace GeoApp.Web.Controllers
     [ApiController]
     public class GeoPointController : ControllerBase
     {
-        IPointsService PointService { get; set; }
-
-
+        private IPointsService PointService { get; set; }
 
         public GeoPointController(IPointsService pointService)
         {
             Log.Information("GeoPointController const"); // just for test
             PointService = pointService;
-          
         }
 
         [HttpGet("{id}")]
@@ -30,11 +23,7 @@ namespace GeoApp.Web.Controllers
         {
             var result = PointService.GetPoints(id); ;
 
-
-
             return result;
         }
-
- 
     }
 }

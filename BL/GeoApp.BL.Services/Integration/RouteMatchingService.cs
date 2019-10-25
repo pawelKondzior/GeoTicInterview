@@ -1,19 +1,13 @@
-﻿using GeoApp.BL.Contracts.IServices;
-using GeoApp.DAL.Model;
-using SharpRepository.Repository;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
-using GeoApp.BL.Contracts.DTO;
-using AutoMapper;
+﻿using GeoApp.BL.Contracts.DTO;
 using GeoApp.BL.Contracts.DTO.Configuration;
 using GeoApp.BL.Contracts.DTO.Integration.Here;
-using GeoApp.BL.Services.Extensions;
-
-using RestSharp;
 using GeoApp.BL.Contracts.DTO.Integration.Here.Response;
+using GeoApp.BL.Contracts.IServices;
+using GeoApp.BL.Services.Extensions;
 using Newtonsoft.Json;
+using RestSharp;
+using System;
+using System.Collections.Generic;
 
 namespace GeoApp.BL.Services.Services
 {
@@ -22,6 +16,7 @@ namespace GeoApp.BL.Services.Services
         private const string BaseUrl = "http://rme.api.here.com/2/matchroute.json";
 
         private HereApiConfDTO HereApiConfDTO { get; set; }
+
         public RouteMatchingService(HereApiConfDTO hereApiConfDTO)
         {
             HereApiConfDTO = hereApiConfDTO;
@@ -41,7 +36,6 @@ namespace GeoApp.BL.Services.Services
 
             request.AddHeader("Content-Type", "application/gpx+xml");
             request.AddParameter("application/gpx+xml", bytes, ParameterType.RequestBody);
-
 
             var response = client.Execute(request);
 
@@ -70,7 +64,6 @@ namespace GeoApp.BL.Services.Services
 
                 list.Add(pt);
             }
-
 
             gpxItem.trk.trkseg = list.ToArray();
             return gpxItem;

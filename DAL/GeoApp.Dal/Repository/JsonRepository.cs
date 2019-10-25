@@ -72,11 +72,12 @@ namespace GeoApp.DAL.Repository
 
         protected override IQueryable<GeoInformation> BaseQuery(IFetchStrategy<GeoInformation> fetchStrategy = null)
         {
+            if (!AllItems.Any())
+            {
+                LoadItems(FileNames);
+            }
 
-            LoadItems(FileNames);
-
-            return AllItems.AsQueryable< GeoInformation>();
-            
+            return AllItems.AsQueryable<GeoInformation>();
         }
 
         protected override void DeleteItem(GeoInformation entity)
